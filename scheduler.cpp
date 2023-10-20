@@ -193,7 +193,7 @@ int main() {
         {
         case 1:
             cout << "Note: Duration of each slot is 1 hour. "<< endl;
-            cout << " please choose your operator: \n 0- Service Operator 1 \n 1- Service Operator 2 \n 2- Service Operator 3 \n  " << endl;
+            cout << " please choose your operator: \n 0- Service Operator 0 \n 1- Service Operator 1 \n 2- Service Operator 2 \n  " << endl;
             cin >> oper;
             while(oper > 2 || oper <0 )
             {
@@ -201,8 +201,9 @@ int main() {
                 cin >> oper;
             }
             displayAvailableSlots(oper);
+            cin.ignore();
             cout << " Enter the name of customer: ";
-            cin >> custName;
+            getline(cin, custName);
             cout << " enter start time of your slot: ";
             cin >> startTime;
             while(startTime >23 || startTime <0)
